@@ -58,7 +58,7 @@ df = read_data()
 df[['route_id', 'trip_id', 'service_id',
    'trip_headsign', 'block_id']].to_csv('data/gtfs/trips.txt', sep=',', index=False)
 
-## agency.txt
+### agency.txt
 download_url(url+str(ids[5]), temp_file)
 df = read_data()
 df = df.rename(columns = {'agency_code':'agency_id'})  # change column name to match gtfs format
